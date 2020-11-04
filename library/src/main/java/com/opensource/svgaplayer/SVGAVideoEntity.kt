@@ -195,7 +195,7 @@ class SVGAVideoEntity {
     private fun createSvgaAudioEntity(audio: AudioEntity, audiosFileMap: HashMap<String, File>): SVGAAudioEntity {
         val item = SVGAAudioEntity(audio)
         val startTime = (audio.startTime ?: 0).toDouble()
-        val totalTime = (audio.totalTime ?: 0).toDouble()
+        val totalTime = (audio.totalTime ?: 1).toDouble()
         if (totalTime.toInt() == 0) {
             // 除数不能为 0
             return item
